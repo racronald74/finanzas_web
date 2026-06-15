@@ -1,2 +1,4 @@
 D:\Proyecto Finanzas WEB\finanzas_web\src\main\java\model\Gasto.java
 D:\Proyecto Finanzas WEB\finanzas_web\src\main\java\service\GastoService.java
+D:\Proyecto Finanzas WEB\finanzas_web\src\main\java\servlet\ListarGastosServlet.java
+D:\Proyecto Finanzas WEB\finanzas_web\src\main\java\servlet\RegistrarGastoServlet.java
