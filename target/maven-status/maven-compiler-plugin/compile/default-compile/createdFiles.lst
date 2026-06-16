@@ -1,2 +1,4 @@
 servlet\RegistrarGastoServlet.class
+servlet\ListarGastosServlet.class
 model\Gasto.class
+service\GastoService.class

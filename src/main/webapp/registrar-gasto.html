@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Registro de Gastos</title>
+
+</head>
+
+<body>
+
+    <h1>Registro de Gastos</h1>
+
+    <!--
+        Formulario HTML.
+
+        action:
+        URL del Servlet que recibirá los datos.
+
+        method:
+        POST porque vamos a registrar información.
+    -->
+    <form action="registrar-gasto" method="post">
+
+        <label for="descripcion">
+            Descripción:
+        </label>
+
+        <input
+                type="text"
+                id="descripcion"
+                name="descripcion"
+                required>
+
+        <br><br>
+
+        <label for="categoria">
+            Categoría:
+        </label>
+
+        <input
+                type="text"
+                id="categoria"
+                name="categoria"
+                required>
+
+        <br><br>
+
+        <label for="monto">
+            Monto:
+        </label>
+
+        <input
+                type="number"
+                id="monto"
+                name="monto"
+                step="0.01"
+                required>
+
+        <br><br>
+
+        <button type="submit">
+            Registrar Gasto
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="listar-gastos">
+        Ver Gastos Registrados
+    </a>
+
+</body>
+
+</html>
