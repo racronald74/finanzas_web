@@ -83,15 +83,19 @@ out.println("<h2>Gastos Registrados</h2>");
 
         for (Gasto gasto : gastos) {
 
-            out.println(
-                    "<tr>" +
-                    "<td>" + gasto.getId() + "</td>" +
-                    "<td>" + gasto.getDescripcion() + "</td>" +
-                    "<td>" + gasto.getCategoria() + "</td>" +
-                    "<td>" + gasto.getMonto() + "</td>" +
-                    "</tr>"
-            );
-        }
+    // Formatear el monto con separador de miles
+    String montoFormateado =
+            String.format("$%,.0f", gasto.getMonto());
+
+    out.println(
+            "<tr>" +
+            "<td>" + gasto.getId() + "</td>" +
+            "<td>" + gasto.getDescripcion() + "</td>" +
+            "<td>" + gasto.getCategoria() + "</td>" +
+            "<td>" + montoFormateado + " COP</td>" +
+            "</tr>"
+    );
+}
 
         out.println("</table>");
 
@@ -100,7 +104,7 @@ out.println("<h2>Gastos Registrados</h2>");
         out.println(
                 "<a href='registrar-gasto.html'>Registrar nuevo gasto</a>"
         );
-        
+
         out.println("</div>");
 
         out.println("</body>");

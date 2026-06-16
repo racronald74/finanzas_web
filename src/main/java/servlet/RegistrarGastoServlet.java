@@ -54,7 +54,73 @@ public class RegistrarGastoServlet extends HttpServlet {
                 monto);
 
         // Redirigir al listado de gastos
-        response.sendRedirect(
-                "listar-gastos");
+        response.setContentType("text/html;charset=UTF-8");
+
+response.getWriter().println(
+        """
+        <!DOCTYPE html>
+        <html>
+        <head>
+
+            <title>Registro Exitoso</title>
+
+            <meta http-equiv="refresh"
+                  content="2;url=listar-gastos">
+
+            <style>
+
+                body {
+
+                    font-family: Arial, sans-serif;
+
+                    background-color: #f4f6f9;
+
+                    display: flex;
+
+                    justify-content: center;
+
+                    align-items: center;
+
+                    height: 100vh;
+                }
+
+                .mensaje {
+
+                    background-color: white;
+
+                    padding: 40px;
+
+                    border-radius: 12px;
+
+                    box-shadow:
+                        0 4px 12px rgba(0,0,0,0.15);
+
+                    text-align: center;
+                }
+
+                h2 {
+
+                    color: green;
+                }
+
+            </style>
+
+        </head>
+
+        <body>
+
+            <div class="mensaje">
+
+                <h2>Gasto registrado correctamente</h2>
+
+                <p>Redirigiendo al listado de gastos...</p>
+
+            </div>
+
+        </body>
+
+        </html>
+        """
+);
     }
 }
