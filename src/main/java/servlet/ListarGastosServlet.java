@@ -47,14 +47,30 @@ public class ListarGastosServlet extends HttpServlet {
                 response.getWriter();
 
         out.println("<html>");
-        out.println("<head>");
-        out.println("<title>Lista de Gastos</title>");
-        out.println("</head>");
-        out.println("<body>");
 
-        out.println("<h1>Gastos Registrados</h1>");
+out.println("<head>");
 
-        out.println("<table border='1'>");
+out.println("<title>Lista de Gastos</title>");
+
+out.println(
+        "<link rel='stylesheet' href='css/style.css'>"
+);
+
+out.println("</head>");
+
+out.println("<body>");
+
+out.println(
+        "<div class='header'>" +
+        "<h1>Finanzas Web</h1>" +
+        "</div>"
+);
+
+out.println("<div class='container'>");
+
+out.println("<h2>Gastos Registrados</h2>");
+
+        out.println("<table>");
 
         out.println(
                 "<tr>" +
@@ -84,6 +100,8 @@ public class ListarGastosServlet extends HttpServlet {
         out.println(
                 "<a href='registrar-gasto.html'>Registrar nuevo gasto</a>"
         );
+        
+        out.println("</div>");
 
         out.println("</body>");
         out.println("</html>");
